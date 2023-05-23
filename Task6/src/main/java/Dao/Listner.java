@@ -17,9 +17,18 @@ public class Listner implements ServletContextListener {
     	     		
     }
     public void contextDestroyed(ServletContextEvent sce)  { 
-    	ServletContext scd=sce.getServletContext();
-    	DataBaseUtil baseUtil=new DataBaseUtil();
-    	scd.setAttribute("closeConnection", baseUtil);
+    	  try {
+			DataBaseUtil.connection.close();
+            System.out.println("DataBase Connection is closed ");
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	        System.out.println("Unable to close the connection");
+
+		}
+          
+      
 
 
    }
