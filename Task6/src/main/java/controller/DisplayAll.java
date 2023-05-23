@@ -36,9 +36,9 @@ public class DisplayAll extends HttpServlet {
 		out.println(jasonFormat);
 //		baseUtil.dbClose();
 		out.close();
-		ServletContext scd=request.getServletContext();
-		DataBaseUtil baseUtil1= (DataBaseUtil) scd.getAttribute("closeConnection");
-		baseUtil1.dbClose();
+// 		ServletContext scd=request.getServletContext();
+// 		DataBaseUtil baseUtil1= (DataBaseUtil) scd.getAttribute("closeConnection");
+// 		baseUtil1.dbClose();
 
 	}	
 	
