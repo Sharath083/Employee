@@ -26,14 +26,14 @@ public class DataBaseUtil {
 		
 	}
 		
-	public static void dbClose() {
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+// 	public static void dbClose() {
+// 		try {
+// 			connection.close();
+// 		} catch (SQLException e) {
+// 			// TODO Auto-generated catch block
+// 			e.printStackTrace();
+// 		}
+// 	}
 	public Connection getConnector() {
 		try {
 			connection=dataSource().getConnection();
